@@ -1,0 +1,52 @@
+.detail {
+
+    .html-title{
+        font-size: 120%;
+        font-family: 'Battambang';
+        line-height: 30px;
+        color: #0048c1;
+    }
+
+    .html-source{
+        color: #092961;
+    }
+
+    ion-label{
+        overflow: visible;
+        white-space: normal;
+    }
+
+    .html-description{
+        p{
+            font-family: 'Battambang';
+            font-size: 100%;
+            color: #000;
+            word-wrap: break-word;
+        }
+    }
+
+    .back-page{
+     height: 60px;
+     width: 60px;
+     background-color: transparent !important;
+     background: url(/assets/images/back.png) no-repeat;
+     background-size: 100%;
+     background-position: 0px 0px;
+     box-shadow: none !important;
+     border-color: rgba(0,0,0,0) !important;
+     outline: none !important;
+ }
+
+ p{
+    padding: 10px 0px;
+}
+
+img{
+    width: 100%;
+}
+
+.free-space{
+    height: 70px;
+}
+
+}
