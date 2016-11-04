@@ -47,6 +47,7 @@
       "ionic-plugin-deploy",
       "cordova-plugin-safariviewcontroller",
       "cordova-plugin-spinner-dialog",
+      "cordova-plugin-apprate",
       "cordova-plugin-inappbrowser",
       {
           "variables": {

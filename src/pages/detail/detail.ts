@@ -12,6 +12,7 @@ export class DetailPage {
     result: any;
     title: any;
     pushId: any;
+    customLocale: any = {};
 
     constructor(private navCtrl: NavController, private news: News, private navParams: NavParams) {
         var articleId = this.navParams.get('id');

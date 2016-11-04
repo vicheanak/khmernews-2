@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Platform, NavController, NavParams } from 'ionic-angular';
 import {News} from '../../providers/news';
-declare var AdMob: any;
+// declare var AdMob: any;
 import {DetailPage} from '../detail/detail';
 import { SocialSharing } from 'ionic-native';
 
@@ -16,7 +16,7 @@ import { SocialSharing } from 'ionic-native';
       data: any = {};
       title: any;
       website: any;
-      private admobId: any;
+      // private admobId: any;
       constructor(private platform: Platform, private navCtrl: NavController, private navParams: NavParams, private news: News) {
           this.title = this.navParams.get('websiteKh') ? this.navParams.get('websiteKh') : 'Khmer News';
           this.website = this.navParams.get('website') ? this.navParams.get('website') : '';
@@ -24,29 +24,27 @@ import { SocialSharing } from 'ionic-native';
               this.newsData = data;
           });
           this.platform.ready().then(() => {
+              // //AdMob
+              // if(/(android)/i.test(navigator.userAgent)) {
+              //     this.admobId = {
+              //         banner: 'ca-app-pub-2691898388649437/5360537707',
+              //         interstitial: 'ca-app-pub-2691898388649437/2267470501'
+              //     };
+              // } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+              //     this.admobId = {
+              //         banner: 'ca-app-pub-2691898388649437/5360537707',
+              //         interstitial: 'ca-app-pub-2691898388649437/2267470501'
+              //     };
+              // }
 
-              //AdMob
-              if(/(android)/i.test(navigator.userAgent)) {
-                  this.admobId = {
-                      banner: 'ca-app-pub-2691898388649437/5360537707',
-                      interstitial: 'ca-app-pub-2691898388649437/2267470501'
-                  };
-              } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
-                  this.admobId = {
-                      banner: 'ca-app-pub-2691898388649437/5360537707',
-                      interstitial: 'ca-app-pub-2691898388649437/2267470501'
-                  };
-              }
-
-              if(AdMob) {
-                  console.log('AdMob Created');
-                  AdMob.createBanner({
-                      adId: this.admobId.banner,
-                      autoShow: true,
-                      position: AdMob.AD_POSITION.BOTTOM_CENTER
-                  });
-              }
-
+              // if(AdMob) {
+              //     console.log('AdMob Created');
+              //     AdMob.createBanner({
+              //         adId: this.admobId.banner,
+              //         autoShow: true,
+              //         position: AdMob.AD_POSITION.BOTTOM_CENTER
+              //     });
+              // }
           });
       }
 
